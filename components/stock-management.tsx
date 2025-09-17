@@ -363,7 +363,7 @@ export function StockManagement() {
             <CardTitle className="text-sm font-medium text-muted-foreground">Estimated Value</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-green-600">${totalValue.toLocaleString()}</div>
+            <div className="text-2xl font-bold text-green-600">Rs. {totalValue.toLocaleString()}</div>
           </CardContent>
         </Card>
         <Card>

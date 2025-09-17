@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Users, DollarSign, Calendar, Package, TrendingUp, TrendingDown } from "lucide-react"
+import { Users, DollarSign, IndianRupee, Calendar, Package, TrendingUp, TrendingDown } from "lucide-react"
 
 const stats = [
   {
@@ -11,10 +11,11 @@ const stats = [
   },
   {
     name: "Monthly Revenue",
-    value: "$45,231",
+    value: "Rs. 45,231",
     change: "+8.2%",
     changeType: "increase",
-    icon: DollarSign,
+    // icon: DollarSign,
+    icon: IndianRupee,
   },
   {
     name: "Active Staff",

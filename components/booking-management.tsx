@@ -506,7 +506,7 @@ export function BookingManagement() {
                           </div>
                         </TableCell>
                         <TableCell>{getStatusBadge(booking.status)}</TableCell>
-                        <TableCell className="font-medium">${booking.totalAmount.toLocaleString()}</TableCell>
+                        <TableCell className="font-medium">Rs. {booking.totalAmount.toLocaleString()}</TableCell>
                         <TableCell className="text-right">
                           <div className="flex items-center justify-end space-x-2">
                             <Button variant="ghost" size="sm">

@@ -5,12 +5,12 @@ import type React from "react"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
-import { LayoutDashboard, Users, DollarSign, Calendar, Package, Settings, Menu, X } from "lucide-react"
+import { LayoutDashboard, Users, DollarSign, Calendar, Package, Settings, Menu, X, IndianRupee } from "lucide-react"
 
 const navigation = [
   { name: "Dashboard", href: "#dashboard", icon: LayoutDashboard, current: true },
   { name: "Staff", href: "#staff", icon: Users, current: false },
-  { name: "Finance", href: "#finance", icon: DollarSign, current: false },
+  { name: "Finance", href: "#finance", icon: IndianRupee, current: false },
   { name: "Booking", href: "#booking", icon: Calendar, current: false },
   { name: "Stock", href: "#stock", icon: Package, current: false },
   { name: "Settings", href: "#settings", icon: Settings, current: false },

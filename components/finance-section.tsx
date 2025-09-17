@@ -22,7 +22,7 @@ import {
   Pie,
   Cell,
 } from "recharts"
-import { TrendingUp, DollarSign, CreditCard, Wallet, Download } from "lucide-react"
+import { TrendingUp, DollarSign, IndianRupee, CreditCard, Wallet, Download } from "lucide-react"
 
 // Mock data for charts
 const revenueData = [
@@ -123,10 +123,12 @@ export function FinanceSection() {
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-muted-foreground">Total Revenue</CardTitle>
-            <DollarSign className="h-4 w-4 text-muted-foreground" />
+            {/* <DollarSign className="h-4 w-4 text-muted-foreground" /> */}
+                        <IndianRupee className="h-4 w-4 text-muted-foreground" />
+
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-foreground">${totalRevenue.toLocaleString()}</div>
+            <div className="text-2xl font-bold text-foreground">Rs. {totalRevenue.toLocaleString()}</div>
             <div className="flex items-center text-xs text-muted-foreground mt-1">
               <TrendingUp className="h-3 w-3 text-green-500 mr-1" />
               <span className="text-green-600">+12.5%</span>
@@ -141,7 +143,7 @@ export function FinanceSection() {
             <CreditCard className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-foreground">${totalExpenses.toLocaleString()}</div>
+            <div className="text-2xl font-bold text-foreground">Rs. {totalExpenses.toLocaleString()}</div>
             <div className="flex items-center text-xs text-muted-foreground mt-1">
               <TrendingUp className="h-3 w-3 text-red-500 mr-1" />
               <span className="text-red-600">+8.2%</span>
@@ -156,7 +158,7 @@ export function FinanceSection() {
             <Wallet className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-green-600">${totalProfit.toLocaleString()}</div>
+            <div className="text-2xl font-bold text-green-600">Rs. {totalProfit.toLocaleString()}</div>
             <div className="flex items-center text-xs text-muted-foreground mt-1">
               <TrendingUp className="h-3 w-3 text-green-500 mr-1" />
               <span className="text-green-600">+18.7%</span>
@@ -300,7 +302,7 @@ export function FinanceSection() {
                     <span
                       className={`font-medium ${transaction.type === "income" ? "text-green-600" : "text-red-600"}`}
                     >
-                      {transaction.type === "income" ? "+" : ""}${Math.abs(transaction.amount).toLocaleString()}
+                      {transaction.type === "income" ? "+" : ""} Rs. {Math.abs(transaction.amount).toLocaleString()}
                     </span>
                   </TableCell>
                   <TableCell>
